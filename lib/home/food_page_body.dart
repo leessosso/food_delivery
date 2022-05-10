@@ -106,7 +106,9 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             itemBuilder: (context, index) {
               return Container(
                 margin: EdgeInsets.only(
-                    left: Dimensions.width17, right: Dimensions.width17, bottom: Dimensions.height10),
+                    left: Dimensions.width20,
+                    right: Dimensions.width20,
+                    bottom: Dimensions.height10),
                 child: Row(
                   children: [
                     //image section
@@ -124,6 +126,27 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                       ),
                     ),
                     //text container
+                    Expanded(
+                      child: Container(
+                        height: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(Dimensions.radius20),
+                            bottomRight: Radius.circular(Dimensions.radius20),
+                          ),
+                          color: Colors.white,
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.only(left: Dimensions.width10),
+                          child: Column(
+                            children: [
+                              BigText(text: "Nutritious fruit meal in China"),
+
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               );
@@ -237,7 +260,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                       ],
                     ),
                     SizedBox(
-                      height: Dimensions.height17,
+                      height: Dimensions.height20,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
