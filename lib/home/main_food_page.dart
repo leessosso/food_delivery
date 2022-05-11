@@ -43,7 +43,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                             text: 'Seoul',
                             color: Colors.black54,
                           ),
-                          Icon(Icons.arrow_drop_down_rounded)
+                          const Icon(Icons.arrow_drop_down_rounded)
                         ],
                       )
                     ],
@@ -69,7 +69,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
             ),
           ),
           //showing the body
-          Expanded(
+          const Expanded(
             child: SingleChildScrollView(
               child: FoodPageBody(),
             ),

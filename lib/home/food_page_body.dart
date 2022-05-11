@@ -137,11 +137,32 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                           color: Colors.white,
                         ),
                         child: Padding(
-                          padding: EdgeInsets.only(left: Dimensions.width10),
+                          padding: EdgeInsets.only(left: Dimensions.width10, right: Dimensions.width10),
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               BigText(text: "Nutritious fruit meal in China"),
-
+                              SizedBox(height: Dimensions.height10,),
+                              SmallText(text: "With chinese characteristics"),
+                              SizedBox(height: Dimensions.height10,),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  IconAndTextWidget(
+                                      icon: Icons.circle_sharp,
+                                      text: "Normal",
+                                      iconColor: AppColors.iconColor1),
+                                  IconAndTextWidget(
+                                      icon: Icons.location_on,
+                                      text: "1.7Km",
+                                      iconColor: AppColors.mainColor),
+                                  IconAndTextWidget(
+                                      icon: Icons.access_time_rounded,
+                                      text: "32min",
+                                      iconColor: AppColors.iconColor2),
+                                ],
+                              ),
                             ],
                           ),
                         ),
