@@ -55,7 +55,7 @@ class PopularFoddDetail extends StatelessWidget {
                   ),
                   color: Colors.redAccent,
                 ),
-                child: AppColumn(),
+                child: AppColumn(text: 'Korean side'),
               ))
         ],
       ),

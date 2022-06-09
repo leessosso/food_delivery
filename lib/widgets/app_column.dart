@@ -7,14 +7,19 @@ import 'big_text.dart';
 import 'icon_and_text_widget.dart';
 
 class AppColumn extends StatelessWidget {
-  const AppColumn({Key? key}) : super(key: key);
+  final String text;
+
+  const AppColumn({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        BigText(text: "Chinese Side"),
+        BigText(
+          text: text,
+          size: Dimensions.font26,
+        ),
         SizedBox(
           height: Dimensions.height10,
         ),
@@ -23,11 +28,11 @@ class AppColumn extends StatelessWidget {
             Wrap(
               children: List.generate(
                   5,
-                      (index) => Icon(
-                    Icons.star,
-                    color: AppColors.mainColor,
-                    size: 15,
-                  )),
+                  (index) => Icon(
+                        Icons.star,
+                        color: AppColors.mainColor,
+                        size: 15,
+                      )),
             ),
             SizedBox(
               width: 10,
