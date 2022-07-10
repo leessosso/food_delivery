@@ -3,10 +3,9 @@ import 'package:food_delivery/utils/dimensions.dart';
 import 'package:food_delivery/widgets/app_column.dart';
 import 'package:food_delivery/widgets/app_icon.dart';
 import 'package:food_delivery/widgets/big_text.dart';
+import 'package:food_delivery/widgets/expandable_text_widget.dart';
 
 import '../../utils/colors.dart';
-import '../../widgets/icon_and_text_widget.dart';
-import '../../widgets/small_text.dart';
 
 class PopularFoodDetail extends StatelessWidget {
   const PopularFoodDetail({Key? key}) : super(key: key);
@@ -17,6 +16,7 @@ class PopularFoodDetail extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+          //background image
           Positioned(
               left: 0,
               right: 0,
@@ -28,6 +28,7 @@ class PopularFoodDetail extends StatelessWidget {
                         fit: BoxFit.cover,
                         image: AssetImage('assets/image/food0.png'))),
               )),
+          //icon widgets
           Positioned(
               top: Dimensions.height45,
               left: Dimensions.width20,
@@ -39,6 +40,7 @@ class PopularFoodDetail extends StatelessWidget {
                   AppIcon(icon: Icons.shopping_cart_outlined),
                 ],
               )),
+          //introduction of food
           Positioned(
               left: 0,
               right: 0,
@@ -63,9 +65,14 @@ class PopularFoodDetail extends StatelessWidget {
                       SizedBox(
                         height: Dimensions.height20,
                       ),
-                      BigText(text: 'Introduce')
+                      BigText(text: 'Introduce'),
+                      SizedBox(
+                        height: Dimensions.height20,
+                      ),
+                      Expanded(child: SingleChildScrollView(child: ExpandableTextWidget( text: "This is an e-commerce app for food delivery using flutter with backend as crash course tutorial for iOS and Android. This is a shopping app with backend of Laravel and Laravel admin panel using restful api complete CRUD operations. We also used firebase for notification. This tutorial covers complete shopping cart, placing orders, signup or registration, sign-in or login, payment.This is an e-commerce app for food delivery using flutter with backend as crash course tutorial for iOS and Android. This is a shopping app with backend of Laravel and Laravel admin panel using restful api complete CRUD operations. We also used firebase for notification. This tutorial covers complete shopping cart, placing orders, signup or registration, sign-in or login, payment.This is an e-commerce app for food delivery using flutter with backend as crash course tutorial for iOS and Android. This is a shopping app with backend of Laravel and Laravel admin panel using restful api complete CRUD operations. We also used firebase for notification. This tutorial covers complete shopping cart, placing orders, signup or registration, sign-in or login, payment.")))
                     ],
-                  )))
+                  ))),
+
         ],
       ),
       bottomNavigationBar: Container(
